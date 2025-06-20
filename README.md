@@ -1,34 +1,57 @@
 # Semicolonify
 
-This is a simple Neovim Plugin to add a semicolon to every line without a semicolon at the end, unless they end with the following - { "[", "]", "{", "}", ";", ":", "."}
+A simple Neovim plugin that automatically adds semicolons to lines that don't end with one.
 
-The command to do this is as follows: require("semicolonify").semicolonify()
+## Features
 
-The plugin is configured to only work on filetypes you have manually allowed. There are default filetypes that are used if there are not manually entered filetypes, you can also add these default filetypes ontop of your manually inputted filetypes using "*".
+- Adds semicolons to lines that don't already end with specific characters
+- Configurable file type support
+- Lightweight and fast
 
-Here is an example using lazy -
+## Usage
 
+The plugin will add semicolons to every line that doesn't end with any of these characters:
+- `[` (opening bracket)
+- `]` (closing bracket)
+- `{` (opening brace)
+- `}` (closing brace)
+- `;` (semicolon)
+- `:` (colon)
+- `.` (period)
+
+### Basic Command
+
+```lua
+require("semicolonify").semicolonify()
+
+
+## Configuration
+
+The plugin only works on file types you explicitly allow. You can specify custom file types or use the default ones.
+File Types
+
+Custom file types: Specify an array of file types
+Default file types: Use "*" to include built-in defaults
+Combined: Mix custom file types with defaults using "*"
+
+### Setup Example (Lazy.nvim)
+
+```lua
 return {
-    dir="~/Documents/Code/Projects/semicolonify",
+    dir = "~/path/to/semicolonify",
     name = "semicolonify",
-    lazy=false,
-
+    lazy = false,
     config = function()
-       require("semicolonify").setup({
-            filetypes = {"lua", "*"}
+        require("semicolonify").setup({
+            filetypes = {"*"}
         })
     end
 }
 
---- Recommendation ---
+## Recommended Keymap
 
-Its much easier to use this plugin if a keymap is set to run semicolonify.
-
-Here is an example setup -
-
+```lua
 vim.keymap.set("n", "<leader><leader>;", function()
     require("semicolonify").semicolonify()
 end)
-
-
 
