@@ -30,9 +30,9 @@ require("semicolonify").semicolonify()
 The plugin only works on file types you explicitly allow. You can specify custom file types or use the default ones.
 File Types
 
-Custom file types: Specify an array of file types
-Default file types: Use "*" to include built-in defaults
-Combined: Mix custom file types with defaults using "*"
+- Custom file types: Specify an array of file types
+- Default file types: Use "*" to include built-in defaults
+- Combined: Mix custom file types with defaults using "*"
 
 ### Setup Example (Lazy.nvim)
 
