@@ -11,7 +11,49 @@ local function contains(target, contain)
 end
 
 local default_config = {
-    filetypes = { "c", "cs", "rs" }
+    filetypes = {
+        "c",
+        "cpp",
+        "java",
+        "javascript",
+        "typescript",
+        "cs",
+        "objc",
+        "swift",
+        "rust",
+        "go",
+        "kotlin",
+        "scala",
+        "php",
+        "perl",
+        "d",
+        "vala",
+        "dart",
+        "haxe",
+        "zig",
+        "processing",
+        "groovy",
+        "fsharp",
+        "julia",
+        "vhdl",
+        "verilog",
+        "pascal",
+        "asm",
+        "nim",
+        "ada",
+        "fortran",
+        "ocaml",
+        "coq",
+        "elixir",
+        "crystal",
+        "pony",
+        "racket",
+        "scheme",
+        "bash",
+        "fish",
+        "zsh",
+    }
+
 }
 
 M.config = {}
@@ -43,6 +85,7 @@ function M.semicolonify()
 
     local filetype = vim.bo.filetype
 
+    print("Filetype: ", filetype)
 
     local filetypes = M.config.filetypes
     if contains(filetype, filetypes) == true then
