@@ -38,7 +38,7 @@ File Types
 
 ```lua
 return {
-    dir = "~/path/to/semicolonify",
+    dir = "JamieByers/semicolonify.nvim",
     name = "semicolonify",
     lazy = false,
     config = function()
