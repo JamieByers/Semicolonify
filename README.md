@@ -34,16 +34,16 @@ File Types
 - Default file types: Use "*" to include built-in defaults
 - Combined: Mix custom file types with defaults using "*"
 
-### Setup Example (Lazy.nvim)
+### Installation / Setup Example (Lazy.nvim)
 
 ```lua
 return {
-    dir = "JamieByers/semicolonify.nvim",
+    "JamieByers/semicolonify.nvim",
     name = "semicolonify",
     lazy = false,
     config = function()
         require("semicolonify").setup({
-            filetypes = {"*"}
+            filetypes = {"*", "typescript"}
         })
     end
 }
