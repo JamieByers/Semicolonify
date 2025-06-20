@@ -1,4 +1,4 @@
-# Semicolonify
+# Semicolonify.nvim
 
 A simple Neovim plugin that automatically adds semicolons to lines that don't end with one.
 
