@@ -23,7 +23,7 @@ The plugin will add semicolons to every line that doesn't end with any of these 
 
 ```lua
 require("semicolonify").semicolonify()
-
+```
 
 ## Configuration
 
@@ -47,6 +47,7 @@ return {
         })
     end
 }
+```
 
 ## Recommended Keymap
 
@@ -54,4 +55,5 @@ return {
 vim.keymap.set("n", "<leader><leader>;", function()
     require("semicolonify").semicolonify()
 end)
+```
 
