@@ -85,8 +85,6 @@ function M.semicolonify()
 
     local filetype = vim.bo.filetype
 
-    print("Filetype: ", filetype)
-
     local filetypes = M.config.filetypes
     if contains(filetype, filetypes) == true then
         vim.api.nvim_buf_set_lines(0, 0, -1, false, edited_lines)
