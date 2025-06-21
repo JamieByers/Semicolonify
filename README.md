@@ -61,6 +61,7 @@ return {
 
 ## Default Configuration
 
+```lua
 local default_config = {
     filetypes = {
         "c",
@@ -75,7 +76,7 @@ local default_config = {
     terminator = ";",
     run_on_save = true
 }
-
+```
 
 ## Recommended Keymaps
 
