@@ -59,6 +59,24 @@ return {
 }
 ```
 
+## Default Configuration
+
+local default_config = {
+    filetypes = {
+        "c",
+        "cpp",
+        "java",
+        "javascript",
+        "typescript",
+        ...
+    },
+
+    punctuation = { "{", "}", ";", ":", "."},
+    terminator = ";",
+    run_on_save = true
+}
+
+
 ## Recommended Keymaps
 
 ```lua
